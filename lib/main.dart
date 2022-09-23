@@ -12,6 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
       home: MyHomePage(),
     );
   }
@@ -78,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Card(
-              color: Colors.red,
+              color: Theme.of(context).primaryColor,
               child: Container(
                 width: double.infinity,
                 child: Text('Wykres'),
